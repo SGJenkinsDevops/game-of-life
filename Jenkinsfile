@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Package Creation') {
             tools {
-                jdk 'JDK_17_UBUNTU'
+                jdk 'JDK_8_UBUNTU'
             }
             steps {
                 sh "mvn ${params.MAVEN_GOAL}"
