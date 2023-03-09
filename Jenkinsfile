@@ -1,6 +1,6 @@
 pipeline {
     agent { label 'JDK_8' }
-    triggers { pollSCM ('* * * * *') }
+    triggers { pollSCM ('* 7 * * 0') }
     parameters {
         choice(name: 'MAVEN_GOAL', choices: ['package', 'install', 'clean'], description: 'Maven Goal')
     }
@@ -8,7 +8,7 @@ pipeline {
         stage('Version Control System') {
             steps {
                 git url: 'https://github.com/SGJenkinsDevops/game-of-life.git',
-                    branch: 'master'
+                    branch: 'uat'
             }
         }
         stage('Package Creation') {
