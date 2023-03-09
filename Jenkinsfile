@@ -8,7 +8,7 @@ pipeline {
         stage('Version Control System') {
             steps {
                 git url: 'https://github.com/SGJenkinsDevops/game-of-life.git',
-                    branch: 'master'
+                    branch: 'dev'
             }
         }
         stage('Package Creation') {
