@@ -16,6 +16,7 @@ pipeline {
                 jdk 'JDK_8_UBUNTU'
             }
             steps {
+                sh "mvn clean"
                 sh "mvn ${params.MAVEN_GOAL}"
             }
         }
