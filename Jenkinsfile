@@ -26,7 +26,7 @@ pipeline {
                                  onlyIfSuccessful: true
                 junit testResults: '**/surefire-reports/TEST-*.xml'
                 stash name: 'spc-jar',
-                    include: '**/target/gameoflife-build-1.0-SNAPSHOT.jar'
+                    includes: '**/target/gameoflife-build-1.0-SNAPSHOT.jar'
             }
         }
         stage('Ansible') {
